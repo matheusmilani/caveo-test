@@ -1,0 +1,23 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "caveo-test",
+    "synchronize": true,
+    "entities": [
+      "entity/*.js"
+    ],
+    "subscribers": [
+      "subscriber/*.js"
+    ],
+    "migrations": [
+      "migration/*.js"
+    ],
+    "cli": {
+      "entitiesDir": "entity",
+      "migrationsDir": "migration",
+      "subscribersDir": "subscriber"
+    }
+  }
