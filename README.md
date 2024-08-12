@@ -22,6 +22,8 @@ To run the project, you may run the Docker Compose, which will create both envir
 
 You migh use the Postman colleciton to easily check the payloads and requests from the application.
 
+If you run the application with Docker, the PORT used is 3000, otherwise if use `node server.js`, the PORT used is the 1337.
+
 ## AWS Services
 The application uses the Cognito to allow the user registrations, login and allow to access routes.
 The cognito was configured using the simple way of login (username and password), and accepts to enable/disable users.
@@ -53,5 +55,30 @@ The endpoints from the application you may find them on the Postman collection.
 If the application runs without error, you might check on the main endpoint `http://localhost:3000/`, this one have no authentication:
 ![No auth](docs/images/no-auth.png "No auth")
 
+### Sign Up
+This endpoint allows to create a new user on Cognito.
+It only creates the user, not sync with any group.
+After create, the user might receive an email with a code. That code should be used on the next endpoint.
+![SignUp](docs/images/signup.png "SignUp")
 
+### Confirm Sign Up
+This endpoint allows to confirm the registration of the user. It might be used to allows access or control some business requirements. 
+![Confirm](docs/images/confirm.png "Confirm")
 
+### Add User To Group
+This endpoint assing an user with a group. That group is created on Cognito service and allows to control the endpoints access.
+![add-to-group](docs/images/add-to-group.png "add-to-group")
+
+### Sign In
+This endpoint returns the token of an authenticated user. This token will be used on the authenticated endpoints.
+![token](docs/images/token.png "token")
+
+### Check Groups
+This endpoint returns the endpoints that the user have access.
+![check-groups](docs/images/check-groups.png "check-groups")
+
+### Authenticated routes
+The authenticated routes are explicits and returns if the user have access.
+The token is not refreshed all the time that the user access an endpoint. 
+![no-access](docs/images/no-access.png "no-access")
+![access](docs/images/access.png "access")
