@@ -13,6 +13,8 @@ The system is separated by:
 
 On the main path you will find the config files and server.js.
 
+You will find the folder docs, on that folder you will find a Postman collection which was used on this application to test the scenarios.
+
 ## How to run
 To run the project, you may run the Docker Compose, which will create both environments:
 - Application

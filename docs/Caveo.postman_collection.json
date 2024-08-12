@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "83100358-d5b9-4633-b618-dc61d7eff99b",
+		"name": "Caveo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12981136"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"matheus.milani\",\r\n    \"password\": \"AbC1234567*\",\r\n    \"email\": \"matheus.milani21@gmail.com.br\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"matheus.milani\",\r\n    \"confirmationCode\": \"027065\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User To Group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"matheus.milani\",\r\n    \"groupName\": \"reader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addToGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addToGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"matheus.milani\",\r\n    \"password\": \"Calopsite21*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check groups",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImV5SnJhV1FpT2lKUE1HNXNLMmxFYzNaSGJraG9TbWRDTVZvelNqUXJVWEJ4UzBSa016azFWbkp2UVRNNE0yeHVjV1pqUFNJc0ltRnNaeUk2SWxKVE1qVTJJbjAuZXlKemRXSWlPaUl3TVROaVlUVTBNQzAyTURreExUY3dNalF0TW1RMk5TMDBaamhqWlRSak9ESTJaV1FpTENKamIyZHVhWFJ2T21keWIzVndjeUk2V3lKM2NtbDBaWElpTENKeVpXRmtaWElpWFN3aWFYTnpJam9pYUhSMGNITTZYQzljTDJOdloyNXBkRzh0YVdSd0xuVnpMV1ZoYzNRdE1pNWhiV0Y2YjI1aGQzTXVZMjl0WEM5MWN5MWxZWE4wTFRKZmNqYzBRazR6U0dWTElpd2lZMnhwWlc1MFgybGtJam9pTjJWaGRtUTNORGN4YTJSemNXZGtaMlowTURCME1HOXBhbWtpTENKdmNtbG5hVzVmYW5ScElqb2lPVGxtWkRka01tWXRaalpsT0MwME9XVXhMV0l4Wm1ZdFpUVTFaVEF5TURBMk9EQXlJaXdpWlhabGJuUmZhV1FpT2lJME5EaGpaRGMwTXkwd01qaGpMVFEwT1RZdE9HWmlOQzFpT0RCbU4yTmlOelZoTlRRaUxDSjBiMnRsYmw5MWMyVWlPaUpoWTJObGMzTWlMQ0p6WTI5d1pTSTZJbUYzY3k1amIyZHVhWFJ2TG5OcFoyNXBiaTUxYzJWeUxtRmtiV2x1SWl3aVlYVjBhRjkwYVcxbElqb3hOekl6TkRnd05qazRMQ0psZUhBaU9qRTNNak0wT0RReU9UZ3NJbWxoZENJNk1UY3lNelE0TURZNU9Dd2lhblJwSWpvaU16YzNPVGRoTWpBdE5UUmpOUzAwTmpCa0xXSmpOelV0TURRd09HVXlZVGMyWVRVMUlpd2lkWE5sY201aGJXVWlPaUp0WVhSb1pYVnpMbTFwYkdGdWFTSjkuUW9FMWZRelFMUFBLQWYtOEphUldSTlZTQllMMWp4MUVZQU9oSEI3eE5STkFtSUdXMW5ZcXJZaTBQeVYzV2pfTVFMTUJOdUtmNFpocExZWTh6d2NuLUhRai1SUlBVYUJkZ0RkdUVoX2djcXVBMnpjU00tU2kzQkZ3d1ZlMFFiSUJvTnFrZjJ1MjRwVFBQVnltbXRqMXdILWZhcnJuLXB0ajJuaE95d1c0alZTTnN4andCVW15RkVvUFlfUnBwMHoyWlU2eEZWc2o2ajJJd0YxNEUxWUFieXJaUXlPTmdMamxsT1k4RGFBZ1lVUUpGYzE3ejNKNzZLUWxGTUZaYUZOa0Jqc0ptTlpCNkhOZTF0RFhCd2VzcjBld2laaFk0bENhb1Vzb2lMMHlZR2YzTVRBdGd0LS14cjBBMUtfM3VyM2lVOWFveHFXY1cwYlZvcTY3d1R6Z0tnIiwiaWF0IjoxNzIzNDgwNjk5LCJleHAiOjE3MjM1MDk0OTl9.6gJp8VofKT9_l4syaUBqYhijX9bC0ItyZATI2yXRei0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/checkAccess",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"checkAccess"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "eyJraWQiOiJPMG5sK2lEc3ZHbkhoSmdCMVozSjQrUXBxS0RkMzk1VnJvQTM4M2xucWZjPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIwMTNiYTU0MC02MDkxLTcwMjQtMmQ2NS00ZjhjZTRjODI2ZWQiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9yNzRCTjNIZUsiLCJjbGllbnRfaWQiOiI3ZWF2ZDc0NzFrZHNxZ2RnZnQwMHQwb2lqaSIsIm9yaWdpbl9qdGkiOiI0ZTY3M2E4NS1mOTRkLTQ4NDMtODYyYS1kMTNhZDlkYjQxNjYiLCJldmVudF9pZCI6IjliZjVhNjg4LTY0NzUtNGUyOC1iYzAyLWFkMzM4ZGVkNmQ2ZiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3MjM0MjM0NTMsImV4cCI6MTcyMzQyNzA1MywiaWF0IjoxNzIzNDIzNDUzLCJqdGkiOiJjZmYyOGQ5Ny0wZTFkLTQ4YjYtYTM2OS0xNjhlNTUzOGFmMTUiLCJ1c2VybmFtZSI6Im1hdGhldXMubWlsYW5pIn0.Oww_qvamuO1yQIMQxVHTLHy9IrEZW8otLAwo5tbBZMqs6aD1NTH4ATYLxAE6sf2C-SzLDwbT-tRjNC5XbVKKFzFnZRhWyfzbjk03s5abqFgWPl7Fc58UIWpG9D1G4snJcaY3yHXPHFdivWUk2A0nf1L7mo8uSU1NzqcZRKi4S7CSxiBa_ARTzvPYQ9-vFlGhr0NVkkxQgsHbLGDKQMs02u2z0ADFJZzHLipYTh3RUkuaiFc2H4HLR9pGbUfbEFCPcKTxBCfp7FVbHzehK9Tx4U54Uu8njEwjwjVBmcT8dBhcJ9E2yfaaj3ZzMnjmzfT-zjK_0aELAIa08J42TufAvQ",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Writer Authenticate Route",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImV5SnJhV1FpT2lKUE1HNXNLMmxFYzNaSGJraG9TbWRDTVZvelNqUXJVWEJ4UzBSa016azFWbkp2UVRNNE0yeHVjV1pqUFNJc0ltRnNaeUk2SWxKVE1qVTJJbjAuZXlKemRXSWlPaUl3TVROaVlUVTBNQzAyTURreExUY3dNalF0TW1RMk5TMDBaamhqWlRSak9ESTJaV1FpTENKamIyZHVhWFJ2T21keWIzVndjeUk2V3lKM2NtbDBaWElpTENKeVpXRmtaWElpWFN3aWFYTnpJam9pYUhSMGNITTZYQzljTDJOdloyNXBkRzh0YVdSd0xuVnpMV1ZoYzNRdE1pNWhiV0Y2YjI1aGQzTXVZMjl0WEM5MWN5MWxZWE4wTFRKZmNqYzBRazR6U0dWTElpd2lZMnhwWlc1MFgybGtJam9pTjJWaGRtUTNORGN4YTJSemNXZGtaMlowTURCME1HOXBhbWtpTENKdmNtbG5hVzVmYW5ScElqb2lPVGxtWkRka01tWXRaalpsT0MwME9XVXhMV0l4Wm1ZdFpUVTFaVEF5TURBMk9EQXlJaXdpWlhabGJuUmZhV1FpT2lJME5EaGpaRGMwTXkwd01qaGpMVFEwT1RZdE9HWmlOQzFpT0RCbU4yTmlOelZoTlRRaUxDSjBiMnRsYmw5MWMyVWlPaUpoWTJObGMzTWlMQ0p6WTI5d1pTSTZJbUYzY3k1amIyZHVhWFJ2TG5OcFoyNXBiaTUxYzJWeUxtRmtiV2x1SWl3aVlYVjBhRjkwYVcxbElqb3hOekl6TkRnd05qazRMQ0psZUhBaU9qRTNNak0wT0RReU9UZ3NJbWxoZENJNk1UY3lNelE0TURZNU9Dd2lhblJwSWpvaU16YzNPVGRoTWpBdE5UUmpOUzAwTmpCa0xXSmpOelV0TURRd09HVXlZVGMyWVRVMUlpd2lkWE5sY201aGJXVWlPaUp0WVhSb1pYVnpMbTFwYkdGdWFTSjkuUW9FMWZRelFMUFBLQWYtOEphUldSTlZTQllMMWp4MUVZQU9oSEI3eE5STkFtSUdXMW5ZcXJZaTBQeVYzV2pfTVFMTUJOdUtmNFpocExZWTh6d2NuLUhRai1SUlBVYUJkZ0RkdUVoX2djcXVBMnpjU00tU2kzQkZ3d1ZlMFFiSUJvTnFrZjJ1MjRwVFBQVnltbXRqMXdILWZhcnJuLXB0ajJuaE95d1c0alZTTnN4andCVW15RkVvUFlfUnBwMHoyWlU2eEZWc2o2ajJJd0YxNEUxWUFieXJaUXlPTmdMamxsT1k4RGFBZ1lVUUpGYzE3ejNKNzZLUWxGTUZaYUZOa0Jqc0ptTlpCNkhOZTF0RFhCd2VzcjBld2laaFk0bENhb1Vzb2lMMHlZR2YzTVRBdGd0LS14cjBBMUtfM3VyM2lVOWFveHFXY1cwYlZvcTY3d1R6Z0tnIiwiaWF0IjoxNzIzNDgwNjk5LCJleHAiOjE3MjM1MDk0OTl9.6gJp8VofKT9_l4syaUBqYhijX9bC0ItyZATI2yXRei0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/writer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"writer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reader Authenticate Route",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImV5SnJhV1FpT2lKUE1HNXNLMmxFYzNaSGJraG9TbWRDTVZvelNqUXJVWEJ4UzBSa016azFWbkp2UVRNNE0yeHVjV1pqUFNJc0ltRnNaeUk2SWxKVE1qVTJJbjAuZXlKemRXSWlPaUl3TVROaVlUVTBNQzAyTURreExUY3dNalF0TW1RMk5TMDBaamhqWlRSak9ESTJaV1FpTENKamIyZHVhWFJ2T21keWIzVndjeUk2V3lKeVpXRmtaWElpTENKM2NtbDBaWElpWFN3aWFYTnpJam9pYUhSMGNITTZYQzljTDJOdloyNXBkRzh0YVdSd0xuVnpMV1ZoYzNRdE1pNWhiV0Y2YjI1aGQzTXVZMjl0WEM5MWN5MWxZWE4wTFRKZmNqYzBRazR6U0dWTElpd2lZMnhwWlc1MFgybGtJam9pTjJWaGRtUTNORGN4YTJSemNXZGtaMlowTURCME1HOXBhbWtpTENKdmNtbG5hVzVmYW5ScElqb2lOekZoWkRFMk5qRXRZbU13TkMwME9UQTFMVGt3WkdVdFlXUXpaVEpoTjJZNE1XWmhJaXdpWlhabGJuUmZhV1FpT2lKbVpqVmxOMlkyTWkwek9ERTRMVFJqWkRJdFlXVTNOaTB3Tm1OaE16UXlaalk1WldRaUxDSjBiMnRsYmw5MWMyVWlPaUpoWTJObGMzTWlMQ0p6WTI5d1pTSTZJbUYzY3k1amIyZHVhWFJ2TG5OcFoyNXBiaTUxYzJWeUxtRmtiV2x1SWl3aVlYVjBhRjkwYVcxbElqb3hOekl6TkRjMk5qWTFMQ0psZUhBaU9qRTNNak0wT0RBeU5qVXNJbWxoZENJNk1UY3lNelEzTmpZMk5Td2lhblJwSWpvaVpHSXdOV0k1WVdFdE9ETTFaQzAwT1dJeExUbG1abUV0WkRSaVpURXhNR0UxTWpCa0lpd2lkWE5sY201aGJXVWlPaUp0WVhSb1pYVnpMbTFwYkdGdWFTSjkuZEdHM21zbkE3akVTRHJXSXZqS3E0T0R6ZUJDM1Jvbm9wX2NFTEFad1dVbzdBVVBLR1NISTd3b2xtcEtGUUQwYVlZSHJYU3UzOGppQzlJSWZrRklXR3hMS1JpM29SNWhxRV81WFJRckJCZWFITlI4U0pIVjk2cEhocVdneFFRa0ppN3FRUUlCa0FwRWYwdktrVFpxRDRXMzcxbnlXWVRIQ1FsbVJ3Y1VOUWhDNlJ3U0hiMVdPblZwWWJpaVlBZkRSeGxPNVl5NUljZEpER2x2ellmYTRDc2NHX1llYzRJNl83di1zTnBuT0RKaUN6cGpBRHFPU21IVUsyUFNKX09rOTFjeUhGV1dlNXdJcVJXZG5LbjhQWHJfT2I3NUJTRjdMYUtBUEJERHBXamdfYndwbS1lQ3EzWGVSeGVLcHZFb0FBaVVyTl9rMUkzeHY2Sm9kV3BvcEp3IiwiaWF0IjoxNzIzNDc2NjY2LCJleHAiOjE3MjM1MDU0NjZ9.5p7svywdTOa7GgJd3GOLT72pi9fVZ4dIRLvs_iisLzs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/reader",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reader"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Authenticate Route",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImV5SnJhV1FpT2lKUE1HNXNLMmxFYzNaSGJraG9TbWRDTVZvelNqUXJVWEJ4UzBSa016azFWbkp2UVRNNE0yeHVjV1pqUFNJc0ltRnNaeUk2SWxKVE1qVTJJbjAuZXlKemRXSWlPaUl3TVROaVlUVTBNQzAyTURreExUY3dNalF0TW1RMk5TMDBaamhqWlRSak9ESTJaV1FpTENKamIyZHVhWFJ2T21keWIzVndjeUk2V3lKeVpXRmtaWElpTENKM2NtbDBaWElpWFN3aWFYTnpJam9pYUhSMGNITTZYQzljTDJOdloyNXBkRzh0YVdSd0xuVnpMV1ZoYzNRdE1pNWhiV0Y2YjI1aGQzTXVZMjl0WEM5MWN5MWxZWE4wTFRKZmNqYzBRazR6U0dWTElpd2lZMnhwWlc1MFgybGtJam9pTjJWaGRtUTNORGN4YTJSemNXZGtaMlowTURCME1HOXBhbWtpTENKdmNtbG5hVzVmYW5ScElqb2lOekZoWkRFMk5qRXRZbU13TkMwME9UQTFMVGt3WkdVdFlXUXpaVEpoTjJZNE1XWmhJaXdpWlhabGJuUmZhV1FpT2lKbVpqVmxOMlkyTWkwek9ERTRMVFJqWkRJdFlXVTNOaTB3Tm1OaE16UXlaalk1WldRaUxDSjBiMnRsYmw5MWMyVWlPaUpoWTJObGMzTWlMQ0p6WTI5d1pTSTZJbUYzY3k1amIyZHVhWFJ2TG5OcFoyNXBiaTUxYzJWeUxtRmtiV2x1SWl3aVlYVjBhRjkwYVcxbElqb3hOekl6TkRjMk5qWTFMQ0psZUhBaU9qRTNNak0wT0RBeU5qVXNJbWxoZENJNk1UY3lNelEzTmpZMk5Td2lhblJwSWpvaVpHSXdOV0k1WVdFdE9ETTFaQzAwT1dJeExUbG1abUV0WkRSaVpURXhNR0UxTWpCa0lpd2lkWE5sY201aGJXVWlPaUp0WVhSb1pYVnpMbTFwYkdGdWFTSjkuZEdHM21zbkE3akVTRHJXSXZqS3E0T0R6ZUJDM1Jvbm9wX2NFTEFad1dVbzdBVVBLR1NISTd3b2xtcEtGUUQwYVlZSHJYU3UzOGppQzlJSWZrRklXR3hMS1JpM29SNWhxRV81WFJRckJCZWFITlI4U0pIVjk2cEhocVdneFFRa0ppN3FRUUlCa0FwRWYwdktrVFpxRDRXMzcxbnlXWVRIQ1FsbVJ3Y1VOUWhDNlJ3U0hiMVdPblZwWWJpaVlBZkRSeGxPNVl5NUljZEpER2x2ellmYTRDc2NHX1llYzRJNl83di1zTnBuT0RKaUN6cGpBRHFPU21IVUsyUFNKX09rOTFjeUhGV1dlNXdJcVJXZG5LbjhQWHJfT2I3NUJTRjdMYUtBUEJERHBXamdfYndwbS1lQ3EzWGVSeGVLcHZFb0FBaVVyTl9rMUkzeHY2Sm9kV3BvcEp3IiwiaWF0IjoxNzIzNDc2NjY2LCJleHAiOjE3MjM1MDU0NjZ9.5p7svywdTOa7GgJd3GOLT72pi9fVZ4dIRLvs_iisLzs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
