@@ -83,6 +83,9 @@ The token is not refreshed all the time that the user access an endpoint.
 ![no-access](docs/images/no-access.png "no-access")
 ![access](docs/images/access.png "access")
 
+### Signout
+The endpoint `/signout` with the header `authorization` is responsible to invalidate the token.
+
 ### Credentials
 The environment variables and credentials to test the application are:
 ```
@@ -105,3 +108,4 @@ To a production application, the main enhancements are:
 - Update the application with TypeScript;
 - Swagger or similar to documentation of endpoints;
 - Log system with CloudWatch or similar;
+- Refresh the user information / token before the requests, so that the updates on AWS may be real time, even if the user didn~t update the sign in token automatically.
