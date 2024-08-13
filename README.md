@@ -82,3 +82,26 @@ The authenticated routes are explicits and returns if the user have access.
 The token is not refreshed all the time that the user access an endpoint. 
 ![no-access](docs/images/no-access.png "no-access")
 ![access](docs/images/access.png "access")
+
+### Credentials
+The environment variables and credentials to test the application are:
+```
+NODE_ENV=development
+PORT=1337
+JWT_TOKEN = 'WIPqZeYf6Jtqryu64qbJxy42s18XSNqMo'
+JWT_TOKEN_EXPIRATION = '8h'
+AWS_CLIENT_ID = '7eavd7471kdsqgdgft00t0oiji'
+AWS_USER_POOL_ID = 'us-east-2_r74BN3HeK'
+AWS_REGION = 'us-east-2'
+AWS_ACCESS_KEY_ID = 'AKIAS6J7QDMD3BK3X6ZC'
+AWS_SECRET_ACCESS_KEY = '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'
+```
+
+### Enhancements
+To a production application, the main enhancements are:
+- Automated / unit / e2e tests with Jest or similar;
+- Gitflow with validation of tests and deploy;
+- Update version of AWS SDK from v2 to v3;
+- Update the application with TypeScript;
+- Swagger or similar to documentation of endpoints;
+- Log system with CloudWatch or similar;
