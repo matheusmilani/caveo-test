@@ -5,9 +5,6 @@ const Router = require('koa-router'),
 
 const router = new Router();
 
-router.get('/',
-    ctx => (ctx.body = 'This route has no authentication. It is free to go.'));
-
 router.post('/signup', koaBody(), async (ctx) => {
     const { username, password, email } = ctx.request.body;
 
@@ -23,7 +20,7 @@ router.post('/signup', koaBody(), async (ctx) => {
 
     try {
         const data = await cognito.signUp(params).promise();
-        ctx.body = JSON.stringify(data);
+        ctx.body = JSON.stringify({message: "Create! Please confirm with the verificaiton code on your email."});
     } catch (err) {
         ctx.response.status = 400
         ctx.body = JSON.stringify(err);
@@ -62,8 +59,18 @@ router.post('/signin', koaBody(), async (ctx) => {
     };
     const data = await cognito.initiateAuth(params).promise();
     const token = jwt.sign({ username: data.AuthenticationResult.AccessToken }, process.env.JWT_TOKEN, { expiresIn: process.env.JWT_TOKEN_EXPIRATION})
-    ctx.body = JSON.stringify(token);
+    ctx.body = JSON.stringify({message: token});
 
+});
+
+router.post('/signout', authenticateJWT, async (ctx) => {
+    const token  = ctx.request.headers.authorization;
+
+    const params = {
+        AccessToken: token
+        }
+    const data = await cognito.globalSignOut(params).promise();
+    ctx.body = JSON.stringify({message: "Logged out"});
 });
 
 router.post('/addToGroup', koaBody(), async (ctx) => {
@@ -75,7 +82,7 @@ router.post('/addToGroup', koaBody(), async (ctx) => {
         Username: username,
     };
     const data = await cognito.adminAddUserToGroup(params).promise();
-    ctx.body = JSON.stringify(data);
+    ctx.body = JSON.stringify({message: "Added to group " + groupName});
 });
 
 module.exports = router;
