@@ -108,4 +108,4 @@ To a production application, the main enhancements are:
 - Update the application with TypeScript;
 - Swagger or similar to documentation of endpoints;
 - Log system with CloudWatch or similar;
-- Refresh the user information / token before the requests, so that the updates on AWS may be real time, even if the user didn~t update the sign in token automatically.
+- Refresh the user information / token before the requests, so that the updates on AWS may be real time, even if the user didn't update the sign in token automatically.
