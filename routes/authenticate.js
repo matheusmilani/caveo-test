@@ -57,10 +57,15 @@ router.post('/signin', koaBody(), async (ctx) => {
             PASSWORD: password
         }
     };
-    const data = await cognito.initiateAuth(params).promise();
-    const token = jwt.sign({ username: data.AuthenticationResult.AccessToken }, process.env.JWT_TOKEN, { expiresIn: process.env.JWT_TOKEN_EXPIRATION})
-    ctx.body = JSON.stringify({message: token});
 
+    try {
+        const data = await cognito.initiateAuth(params).promise();
+        const token = jwt.sign({ username: data.AuthenticationResult.AccessToken }, process.env.JWT_TOKEN, { expiresIn: process.env.JWT_TOKEN_EXPIRATION})
+        ctx.body = JSON.stringify({message: token});
+    } catch (err) {
+        ctx.response.status = 400
+        ctx.body = JSON.stringify(err);
+    }
 });
 
 router.post('/signout', authenticateJWT, async (ctx) => {
@@ -68,9 +73,15 @@ router.post('/signout', authenticateJWT, async (ctx) => {
 
     const params = {
         AccessToken: token
-        }
-    const data = await cognito.globalSignOut(params).promise();
-    ctx.body = JSON.stringify({message: "Logged out"});
+    }
+
+    try {
+        await cognito.globalSignOut(params).promise();
+        ctx.body = JSON.stringify({message: "Logged out"});
+    } catch (err) {
+        ctx.response.status = 400
+        ctx.body = JSON.stringify(err);
+    }
 });
 
 router.post('/addToGroup', koaBody(), async (ctx) => {
@@ -81,8 +92,15 @@ router.post('/addToGroup', koaBody(), async (ctx) => {
         UserPoolId: process.env.AWS_USER_POOL_ID,
         Username: username,
     };
-    const data = await cognito.adminAddUserToGroup(params).promise();
-    ctx.body = JSON.stringify({message: "Added to group " + groupName});
+    
+    try {
+        await cognito.adminAddUserToGroup(params).promise();
+        ctx.body = JSON.stringify({message: "Added to group " + groupName});
+    } catch (err) {
+        ctx.response.status = 400
+        ctx.body = JSON.stringify(err);
+    }
+    
 });
 
 module.exports = router;
